@@ -1,34 +1,25 @@
 # question 1
-#  WAP to print count of uppercase, lowercase, numbers and special characters in a string.
+# WAP to remove repeated members from a string.print original and resultant string.
 
-str="This is My Lab Question and Lab No is 8"
-upr,lwr,num, spl=0,0,0,0
+input_string = "this is is this more and more repeated string "
+result_str=""
 
-for i in range(len(str)):
-    if str[i]>='A' and str[i]<='Z':
-        upr+=1
-    elif str[i]>='a' and str[i]<='z':
-        lwr+=1
-    elif str[i]>='0' and str[i]<='9':
-        num+=1
-    else:
-        spl+=1
+print("Original String :",input_string)
 
+for char in input_string.split(' '):
+    if char not in result_str:
+        result_str+=' '+char
 
-print("Uppercase letters : ",upr)
-print("Lowercase letters : ",lwr)
-print("Numbers : ",num)
-print("Special chacters ",spl)
+print("string as duplicate removed :",result_str)
 
 # question 2
-# WAP with several string methods.
+# WAP deducing multiple string methods.
 
-ans=str.find('My') # this will return the index of string that we pass as paramater
-# print(ans)
+str = "My new string Hello, world!"
 
-title=str.title()
-# print(title) # this will capital first each word in string
-
-table = str.maketrans("", "", "aeiou")  # Remove vowels
-result = str.translate(table)
-print(result)
+print(str.find("world"))   # 21 (index of first occurrence)
+print(str.index("new"))  # 3 (like find, but raises an error if not found)
+print(str.count("o"))      # 2 (number of times 'o' appears)
+print(str.startswith("Hello"))  # false
+print(str.endswith("!"))    # True
+print(str.replace("world","python")) #"My new string Hello, python!"

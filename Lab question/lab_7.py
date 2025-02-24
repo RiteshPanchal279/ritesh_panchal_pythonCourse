@@ -1,34 +1,34 @@
 # question 1
-# Python program to check if the given string is a palindrome 
+#  WAP to print count of uppercase, lowercase, numbers and special characters in a string.
 
-def plaindromeStr(str):
-   revStr = ""
-   for char in str:
-      revStr=char+revStr
-   if(str==revStr):
-      print("String is plaindrome")
-   else:
-      print("String is not plaindrome")
+str="This is My Lab Question and Lab No is 8"
+upr,lwr,num, spl=0,0,0,0
+
+for i in range(len(str)):
+    if str[i]>='A' and str[i]<='Z':
+        upr+=1
+    elif str[i]>='a' and str[i]<='z':
+        lwr+=1
+    elif str[i]>='0' and str[i]<='9':
+        num+=1
+    else:
+        spl+=1
 
 
-str = input("Enter string: ")
-plaindromeStr(str)
-
+print("Uppercase letters : ",upr)
+print("Lowercase letters : ",lwr)
+print("Numbers : ",num)
+print("Special chacters ",spl)
 
 # question 2
-# Python program to check if a given number is an Armstrong number
+# WAP with several string methods.
 
-def armstrong(num):
-    result=0
-    while num>0:
-      last=num%10
-      result+=last**3
-      num//=10
-    return result
+ans=str.find('My') # this will return the index of string that we pass as paramater
+# print(ans)
 
-num = int((input("Enter number ")))
-ans= armstrong(num)
-if(ans == num ):
-   print("Number is Armstrong ")
-else:
-   print("Number is not Armstrong ")
+title=str.title()
+# print(title) # this will capital first each word in string
+
+table = str.maketrans("", "", "aeiou")  # Remove vowels
+result = str.translate(table)
+print(result)

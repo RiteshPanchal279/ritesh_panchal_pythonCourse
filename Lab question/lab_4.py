@@ -1,26 +1,23 @@
 # question 1
+# Accept a name from the user and display that in lower case using lower() function
 
-print("press 1 Household pourpose: rate per unit : 2rs")
-print("press 2 small business pourpose: rate per unit : 5rs")
-print("press 3 industrial pourpose: rate per unit : 10rs")
-user_type=input("Enter number : ")
-user_consume_unit=int(input("Enter month unit consumption: "))
+def toLower(name):
+   lowertext=name.lower()
+   print(lowertext)
 
-if(user_type=="1" ):
-   print("your bill is : ",2*user_consume_unit)
-elif(user_type=="2" ):
-   print("your bill is : ",5*user_consume_unit)
-elif(user_type=="3"):
-   print("your bill is : ",10*user_consume_unit)
-else:
-   print("Invalid input")
+name=input("Enter your name in capital: ")
+toLower(name)
 
 # question 2
+# Write a function that takes one argument and returns 'Positive' if the number is greater than 0, 'Negative' if it's less than 0, and 'Zero' if it's 0. 
 
-user_travel=int(input("Enter KM that you travel: "))
-if(user_travel <=10):
-   print("Your charge is  :",user_travel*10)
-elif(user_travel>11 and user_travel<=20):
-   print("Your charge is  :",user_travel*5)
-else:
-   print("Your charge is  :",user_travel*4)
+def numberTest(num):
+   if(num==0):
+      print("number is zero")
+   elif(num < 0):
+      print("Numbr is Negative")
+   else:
+      print("Numbr is Positive")
+
+num = int(input("Entr the number : "))
+numberTest(num)

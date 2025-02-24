@@ -1,24 +1,26 @@
-# 1. Using input function take two number and then swap the number
+# question 1
 
-num1=int(input("Enter First number: "))
-num2=int(input("Enter Second number: "))
-print("Number Before swap")
-print("Num1: ",num1)
-print("Num2: ",num2)
+print("press 1 Household pourpose: rate per unit : 2rs")
+print("press 2 small business pourpose: rate per unit : 5rs")
+print("press 3 industrial pourpose: rate per unit : 10rs")
+user_type=input("Enter number : ")
+user_consume_unit=int(input("Enter month unit consumption: "))
 
-# swaping the number 
-temp=num1
-num1=num2
-num2=temp
-print("Number After swap")
-print("Num1: ",num1)
-print("Num2: ",num2)
+if(user_type=="1" ):
+   print("your bill is : ",2*user_consume_unit)
+elif(user_type=="2" ):
+   print("your bill is : ",5*user_consume_unit)
+elif(user_type=="3"):
+   print("your bill is : ",10*user_consume_unit)
+else:
+   print("Invalid input")
 
-# Find the Simple Interest on Rs. 200 for 5 years at 5% per year.
+# question 2
 
-amount=200
-year=5
-interest=5
-
-simple_intrest = 200 * 5 * 5 / 100
-print("The intrest is",simple_intrest)
+user_travel=int(input("Enter KM that you travel: "))
+if(user_travel <=10):
+   print("Your charge is  :",user_travel*10)
+elif(user_travel>11 and user_travel<=20):
+   print("Your charge is  :",user_travel*5)
+else:
+   print("Your charge is  :",user_travel*4)

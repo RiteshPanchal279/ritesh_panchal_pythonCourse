@@ -1,26 +1,34 @@
 # question 1
-# Write a python program to reverse a number using a while loop.
+# Python program to check if the given string is a palindrome 
 
-def reverse(num):
-    ans=0
-    while num>0:
-        last=num%10
-        ans=ans*10+last
-        num//=10
-    return ans
-num = int(input("Enter the number to reverse :"))
-rev_ans=reverse(num)
-print("reverse of ",num," is",rev_ans)
+def plaindromeStr(str):
+   revStr = ""
+   for char in str:
+      revStr=char+revStr
+   if(str==revStr):
+      print("String is plaindrome")
+   else:
+      print("String is not plaindrome")
+
+
+str = input("Enter string: ")
+plaindromeStr(str)
+
 
 # question 2
-# Write a python program to check whether a number is palindrome or not?
+# Python program to check if a given number is an Armstrong number
 
-def isPalindrome(num):
-    revNum = reverse(num)
-    if(num==revNum):
-        print("Number is Palindrome")
-    else:
-        print("Number is not Palindrome")
+def armstrong(num):
+    result=0
+    while num>0:
+      last=num%10
+      result+=last**3
+      num//=10
+    return result
 
-number=int(input("Enter the number for palindrome: "))
-isPalindrome(number)
+num = int((input("Enter number ")))
+ans= armstrong(num)
+if(ans == num ):
+   print("Number is Armstrong ")
+else:
+   print("Number is not Armstrong ")

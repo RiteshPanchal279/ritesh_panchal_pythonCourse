@@ -1,25 +1,33 @@
-# question 1
-# WAP to remove repeated members from a string.print original and resultant string.
+# 1. Write a Python program to get the largest and smallest number from a list without built-in functions. 
 
-input_string = "this is is this more and more repeated string "
-result_str=""
+myList=[3,5,7,1,55,6]
+max=myList[0]
+min=myList[0]
+for i in myList:
+   if(i>max):
+      max=i
 
-print("Original String :",input_string)
+for i in myList:
+   if(i<min):
+      min=i
 
-for char in input_string.split(' '):
-    if char not in result_str:
-        result_str+=' '+char
+print("Largest number is: ",max)
+print("Smallest number is: ",min)
 
-print("string as duplicate removed :",result_str)
+# 2. Write a Python program to find duplicate values from a list and display those.
 
-# question 2
-# WAP deducing multiple string methods.
+a = [1, 2, 3, 4, 5, 2, 6, 3,1]
 
-str = "My new string Hello, world!"
+# A set to keep track of elements that have been seen
+seen = set()
+# A list to store duplicates found in the input list
+duplicates = []
 
-print(str.find("world"))   # 21 (index of first occurrence)
-print(str.index("new"))  # 3 (like find, but raises an error if not found)
-print(str.count("o"))      # 2 (number of times 'o' appears)
-print(str.startswith("Hello"))  # false
-print(str.endswith("!"))    # True
-print(str.replace("world","python")) #"My new string Hello, python!"
+# Iterate over each element in the list
+for i in a:
+    if i in seen:
+        duplicates.append(i)
+    else:
+        seen.add(i)
+
+print(duplicates)

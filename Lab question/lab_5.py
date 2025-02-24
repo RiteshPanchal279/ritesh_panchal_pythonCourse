@@ -1,23 +1,26 @@
 # question 1
-# Accept a name from the user and display that in lower case using lower() function
+# Write a python program to reverse a number using a while loop.
 
-def toLower(name):
-   lowertext=name.lower()
-   print(lowertext)
-
-name=input("Enter your name in capital: ")
-toLower(name)
+def reverse(num):
+    ans=0
+    while num>0:
+        last=num%10
+        ans=ans*10+last
+        num//=10
+    return ans
+num = int(input("Enter the number to reverse :"))
+rev_ans=reverse(num)
+print("reverse of ",num," is",rev_ans)
 
 # question 2
-# Write a function that takes one argument and returns 'Positive' if the number is greater than 0, 'Negative' if it's less than 0, and 'Zero' if it's 0. 
+# Write a python program to check whether a number is palindrome or not?
 
-def numberTest(num):
-   if(num==0):
-      print("number is zero")
-   elif(num < 0):
-      print("Numbr is Negative")
-   else:
-      print("Numbr is Positive")
+def isPalindrome(num):
+    revNum = reverse(num)
+    if(num==revNum):
+        print("Number is Palindrome")
+    else:
+        print("Number is not Palindrome")
 
-num = int(input("Entr the number : "))
-numberTest(num)
+number=int(input("Enter the number for palindrome: "))
+isPalindrome(number)
