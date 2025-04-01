@@ -1,0 +1,16 @@
+1: Insert Data Write an SQL INSERT statement to insert data into the Employee table. 
+
+create table employee (EmpId int primary key,
+first_name varchar(20),
+last_name varchar(20),
+dept varchar(8),
+salary int);
+
+insert into employee values(101,'Manan','Patel','IT',20000);
+insert into employee values(102,'Ajay','Katkar','Finance',44000);
+insert into employee values(103,'Vijay','PAtel','Treasury',30000);
+
+
+2: Retrieving Data Write an SQL SELECT statement to retrieve the first_name and last_name of all employees from the Employee table.
+
+select first_name,last_name from employee;
