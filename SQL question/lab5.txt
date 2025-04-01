@@ -1,0 +1,14 @@
+1. Let's consider a scenario where you want to retrieve information about students from a database table named student and display the results in ascending order based on their last names. 
+
+Hint: Use orderBy clause in a ascending Order
+
+SELECT * FROM Student  
+ORDER BY lastName ASC;
+
+2. Let's consider a scenario where you want to count the number of students based on their gender from a database table named Student.
+
+ Hint: use GroupBy clause and Count() function
+
+SELECT gender, COUNT(*) AS total_students  
+FROM Student  
+GROUP BY gender;
