@@ -1,0 +1,27 @@
+-- 1.Create a table with named Student with attributes: ● StudentID (Primary Key) ● FirstName ● LastName ● DateOfBirth ● Gender ● Email ● Phone
+
+use Lab1;
+
+create table Student (StudentID int primary key,
+FirstName varchar(20),
+LastName varchar(20),
+DateOfBirth date,
+gender varchar(8),
+email varchar(30) unique ,
+phone int);
+
+insert into Student values(2,'Mohit','Patel','2000-08-06','male','testt@exampel.com',1134567890);
+select * from student;
+
+
+
+-- 2. Create a table with name Course with attributes: ● CourseID (Primary Key) ● CourseTitle ● Credits
+
+create table Course (CourseID int primary key,
+CourseTitle varchar(40),
+Credits int);
+
+insert into Course values(101,'Python',1222);
+insert into Course values(102,'SQL',2222);
+
+select * from Course;
