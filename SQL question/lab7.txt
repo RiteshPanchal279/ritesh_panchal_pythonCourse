@@ -1,0 +1,31 @@
+1: Create a table Person with PersonID int, FirstName varchar(255), LastName varchar(255) and age (int). Make PersonID PRIMARY KEY. 
+
+CREATE TABLE Person (
+    PersonID INT PRIMARY KEY,
+    FirstName VARCHAR(255),
+    LastName VARCHAR(255),
+    Age INT
+);
+
+2: Create a table Employee with emp_id int, first_name varchar(255), last_name varchar(255) and age (int ) Make emp_id PRIMARY KEY.
+
+CREATE TABLE Employee (
+    emp_id INT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    age INT
+);
+
+3: Insert data to Person table
+
+INSERT INTO Person (PersonID, FirstName, LastName, Age) VALUES
+(1, 'John', 'Doe', 30),
+(2, 'Jane', 'Smith', 25),
+(3, 'Alice', 'Brown', 35);
+
+4. Create Union of two tables
+use lab7;
+
+SELECT PersonID AS ID, FirstName, LastName, Age FROM Person
+UNION
+SELECT emp_id AS ID, first_name, last_name, age FROM Employee;
