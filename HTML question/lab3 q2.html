@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body style="background-color: rgb(242, 238, 238);">
+   <div align="left">
+      <div style="background-color: rgb(24, 24, 24); color: white; ">
+         <h1>Sample Online Items and Prices</h1>
+      </div>
+      <div style="background-color: aliceblue;padding: 10px; margin: 10px;border-radius: 10px;">
+         <form action="" id="form" name="form"
+            oninput="out.value=(parseInt(lep.value,10)*800)+(parseInt(phone.value,10)*400)+(parseInt(hp.value,10)*50)+(parseInt(tab.value,10)*300) ">
+            <Label for="lep">Leptop ($800 each)</Label><br>
+            <input type="number" name="lep" id="lep" value="0">
+            <br><br>
+            <Label for="phone">Smartphone ($400 each)</Label><br>
+            <input type="number" name="phone" id="phone" value="0">
+            <br><br>
+            <Label for="hp">Headphones ($50 each)</Label><br>
+            <input type="number" name="hp" id="hp" value="0">
+            <br><br>
+            <Label for="tab">Tablet ($300 each)</Label><br>
+            <input type="number" name="tab" id="tab" value="0">
+            <br><br>
+            <button style="background-color: rgb(5, 90, 236); color: white;padding: 8px;">Calculate Total Price</button>
+         </form>
+         <label> Total Price :$</label>
+         <output name="out" form="form">0</output>
+      </div>
+   </div>
+</body>
+</html>
