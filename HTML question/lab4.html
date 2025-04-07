@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Survey Form</title>
+</head>
+
+<body
+   style="font-family: Arial, sans-serif; background-color: #fff; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+   <form
+      style="border: 1px solid #ccc; padding: 20px 40px; border-radius: 8px; width: 400px; box-shadow: 0 0 10px rgba(0,0,0,0.1); background-color: white;">
+      <h2 style="text-align: center; color: blue;">Survey Form</h2>
+
+      <input type="text" placeholder="Enter your name"
+         style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+      <input type="email" placeholder="Enter your email"
+         style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+      <input type="number" placeholder="Enter your age"
+         style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+      <select style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+         <option>Student</option>
+         <option>Professional</option>
+         <option>Other</option>
+      </select>
+
+      <div style="margin-bottom: 15px;">
+         <label style="display: block; margin-bottom: 5px;">Would you recommend this survey form to a friend?</label>
+         <input type="radio" name="recommend" value="yes"> Yes<br>
+         <input type="radio" name="recommend" value="no"> No<br>
+         <input type="radio" name="recommend" value="maybe"> Maybe
+      </div>
+
+      <div style="margin-bottom: 15px;">
+         <label style="display: block; margin-bottom: 5px;"><strong>Languages and Frameworks known</strong> (Check all
+            that apply)</label>
+         <input type="checkbox" name="lang" value="java"> Java<br>
+         <input type="checkbox" name="lang" value="python"> Python<br>
+         <input type="checkbox" name="lang" value="react"> React<br>
+         <input type="checkbox" name="lang" value="angular"> Angular<br>
+         <input type="checkbox" name="lang" value="spring"> Spring
+      </div>
+
+      <div style="margin-bottom: 15px;">
+         <label style="display: block; margin-bottom: 5px;">Any comments or suggestions</label>
+         <textarea rows="4" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+      </div>
+
+      <div style="text-align: center;">
+         <button type="submit"
+            style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Sign
+            Up</button>
+      </div>
+   </form>
+</body>
+
+</html>
