@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Glenary's Restaurant</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background: #fff;
+      }
+
+      header {
+         background-color: #2c2c2c;
+         color: white;
+         padding: 15px 30px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      header h1 {
+         margin: 0;
+      }
+
+      nav a {
+         color: white;
+         margin-left: 20px;
+         text-decoration: none;
+         font-weight: bold;
+      }
+
+      .section {
+         padding: 30px;
+      }
+
+      h2 {
+         font-size: 24px;
+         margin-bottom: 20px;
+      }
+
+      .menu-container {
+         display: flex;
+         gap: 30px;
+         flex-wrap: wrap;
+      }
+
+      .menu-card {
+         border: 1px solid #ccc;
+         border-radius: 8px;
+         padding: 15px;
+         width: 300px;
+      }
+
+      .menu-card img {
+         width: 100%;
+         border-radius: 5px;
+      }
+
+      .menu-card h3 {
+         margin: 10px 0 5px;
+      }
+
+      .menu-card p {
+         margin: 5px 0;
+      }
+
+      video {
+         width: 100%;
+         max-width: 640px;
+         border-radius: 8px;
+      }
+
+      main {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+      }
+   </style>
+</head>
+
+<body>
+
+   <header>
+      <h1>Glenary's Restaurant</h1>
+      <nav>
+         <a href="#menu">Menu</a>
+         <a href="#popular">Popular Dishes</a>
+      </nav>
+   </header>
+
+   <main>
+      <section class="section" id="menu">
+         <h2>Menu</h2>
+         <div class="menu-container">
+            <div class="menu-card">
+               <img src="https://tse3.mm.bing.net/th?id=OIP.jp1Pe7RoQW1zXlSUATRYeQHaEo&pid=Api&P=0&h=180"
+                  alt="Pizza Supreme">
+               <h3>Pizza Supreme</h3>
+               <p>Pizza sauce, mozzarella, bacon, onion, beef mince, capsicum, pepperoni, mushroom, olives</p>
+               <p><strong>Price: ₹250</strong></p>
+            </div>
+            <div class="menu-card">
+               <img src="https://tse3.mm.bing.net/th?id=OIP.rmfdec0BPpCFEx2zxrK2hAHaGM&pid=Api&P=0&h=180"
+                  alt="Paneer Tikka">
+               <h3>Paneer Tikka</h3>
+               <p>Paneer, Yogurt, Ground Spices, Bell Peppers, Onions, Baby Corn, Mushrooms</p>
+               <p><strong>Price: ₹200</strong></p>
+            </div>
+         </div>
+      </section>
+
+      <section class="section" id="popular">
+         <h2>Popular Dishes</h2>
+         <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4">
+            Your browser does not support the video tag.
+         </video>
+
+      </section>
+   </main>
+</body>
+
+</html>
