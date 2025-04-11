@@ -1,0 +1,53 @@
+<!-- Q2. Write a program that reads the JSON object and dynamically creates an HTML page to display the user's information with the below following details: ● A heading displaying "User Information" ● A section to display user details (Name, Age, Email) ● Takes a JSON object containing user information. ● Dynamically creates HTML elements to display the user's name, age, and email. ● Appends the created elements to the HTML page. Use an external stylesheet or bootstrap for styling. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Info Display</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .info-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="card shadow-sm p-4">
+      <h2 class="text-center mb-4">User Information</h2>
+      <div id="userInfo"></div>
+    </div>
+  </div>
+
+  <script>
+    // JSON object
+    const user = {
+      name: "Ritesh Panchal",
+      age: 21,
+      email: "ritesh@example.com"
+    };
+
+    function displayUserInfo(userData) {
+      const userInfoDiv = document.getElementById("userInfo");
+
+      const nameEl = document.createElement("p");
+      nameEl.innerHTML = `<span class="info-label">Name:</span> ${userData.name}`;
+
+      const ageEl = document.createElement("p");
+      ageEl.innerHTML = `<span class="info-label">Age:</span> ${userData.age}`;
+
+      const emailEl = document.createElement("p");
+      emailEl.innerHTML = `<span class="info-label">Email:</span> ${userData.email}`;
+
+      userInfoDiv.appendChild(nameEl);
+      userInfoDiv.appendChild(ageEl);
+      userInfoDiv.appendChild(emailEl);
+    }
+
+    displayUserInfo(user);
+  </script>
+
+</body>
+</html>
