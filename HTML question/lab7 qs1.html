@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0073cf;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Photo Gallery</h1>
+  <button class="btn" onclick="loadImages()">Load Random Images</button>
+
+  <div class="gallery" id="gallery"></div>
+
+  <script>
+    const accessKey = '3p6sEmefbgy9nQbT9LBArerrUtHhkK9Z1H9liPYpqYk'; 
+
+    async function loadImages() {
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = ''; // Clear existing images
+
+      try {
+        const response = await fetch(`https://api.unsplash.com/photos/random?count=10&client_id=${accessKey}`);
+        const images = await response.json();
+
+        images.forEach(image => {
+          const card = document.createElement('div');
+          card.className = 'card';
+
+          const img = document.createElement('img');
+          img.src = image.urls.regular;
+          img.alt = image.alt_description || 'Random Image';
+
+          card.appendChild(img);
+          gallery.appendChild(card);
+        });
+      } catch (error) {
+        console.error('Error fetching images:', error);
+        alert('Failed to load images. Please try again later.');
+      }
+    }
+  </script>
+
+</body>
+</html>
