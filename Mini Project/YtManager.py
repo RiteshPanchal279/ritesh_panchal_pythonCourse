@@ -24,27 +24,31 @@ def list_videos():
    cur.execute("SELECT * FROM videos")
    rows = cur.fetchall()
    if not rows:
-      print(" ** No data Available **")
+      print("** No data Available **")
    else:
-      print("*" * 35)
+      print("\n{:<5} {:<25} {:<15}".format("ID", "Title", "Time"))
+      print("-" * 50)
       for row in rows:
-         print(row)
-      print("*" * 35)
+         print("{:<5} {:<25} {:<15}".format(row[0], row[1], row[2]))
+      print("-" * 50)
 
 # Function to add a new video
 def add_video(name, time):
    cur.execute("INSERT INTO videos(name, time) VALUES (%s, %s)", (name, time))
    db.commit()
+   print("✅ Video added successfully!")
 
 # Function to update a video
 def update_video(video_id, new_name, new_time):
    cur.execute("UPDATE videos SET name=%s, time=%s WHERE id=%s", (new_name, new_time, video_id))
    db.commit()
+   print("✅ Video updated successfully!")
 
 # Function to delete a video
 def delete_video(video_id):
    cur.execute("DELETE FROM videos WHERE id=%s", (video_id,))
    db.commit()
+   print("🗑️ Video deleted successfully!")
 
 # Main app loop
 def main():
@@ -72,9 +76,10 @@ def main():
          video_id = input("Enter video id to delete: ")
          delete_video(video_id)
       elif choice == '5':
+         print("👋 Exiting the app. Goodbye!")
          break
       else:
-         print("*** Invalid Choice!! ***")
+         print("⚠️ Invalid choice! Please enter a number between 1 and 5.")
 
    cur.close()
    db.close()
