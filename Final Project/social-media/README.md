@@ -1,61 +1,56 @@
-# Social Media Platform using Django
+# 🌐 Social Media Platform – Built with Django
 
-![Project Banner](https://raw.githubusercontent.com/Ayushsav/social-media/main/socialmedia/media/post_images/show.png)
+Welcome to the **Social Media Platform**, a beginner-friendly yet feature-rich web application built using the Django framework. This project demonstrates how to build a basic social media experience where users can share updates, connect with others, and manage their profiles.
 
-Welcome to the Social Media Platform project built using Django! This project aims to create a basic social media platform where users can register, log in, post updates, connect with friends, and more. The platform provides a foundation that you can extend and customize to create your own unique social media experience.
+📁 **Project Repository:**  
+🔗 [View on GitHub](https://github.com/RiteshPanchal279/ritesh_panchal_pythonCourse/tree/main/Final%20Project/social-media)
 
-## Table of Contents
+---
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+## 🧩 Features
 
+- ✅ User registration and authentication
+- 👤 Editable user profiles (profile picture and bio)
+- 📰 News feed showing posts from followed users
+- 📝 Create and delete posts
+- ❤️ Like and unlike posts
+- ➕ Follow and ➖ unfollow users
+- 🔍 Search users by username
+- 📱 Responsive, mobile-friendly UI using HTML/CSS
 
-## Features
+---
 
-- User registration and authentication
-- User profiles with profile pictures and bio
-- News feed displaying posts from friends
-- Post creation and deletion
-- Like  on posts
-- Follow to a user & see its post on home feed
-- unfollow to a user
-- User search functionality
-- Responsive and user-friendly design
+## 🚀 Getting Started
 
-## Getting Started
+### ⚙️ Prerequisites
 
-### Prerequisites
+Make sure the following are installed:
 
-Before you begin, ensure you have the following installed:
-
-- Python (version 3.6 or higher)
-- Django (version 3.2 or higher)
+- Python 3.6 or higher
+- Django 3.2 or higher
 - Git
 
-## Usage
+### 📥 Installation
 
-- Register a new account or log in with an existing account.
-- Customize your profile by adding a profile picture and bio.
-- Search for other users.
-- Create and delete your own posts.
-- Like on posts from friends.
-- Follow to a user & see its post on home feed
-- unfollow to a user
-- Explore the news feed to see posts from friends.
-- Log out when you're done using the platform.
+Clone the repository and set up the environment:
 
-## Contributing
+```bash
+# Clone the project
+git clone https://github.com/RiteshPanchal279/ritesh_panchal_pythonCourse.git
+cd ritesh_panchal_pythonCourse/Final\ Project/social-media
 
-Contributions to this project are welcome! To contribute, follow these steps:
+# Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b feature-name`.
-3. Make your changes and commit them: `git commit -m "Add feature"`.
-4. Push to the branch: `git push origin feature-name`.
-5. Open a pull request describing your changes.
+# Install dependencies
+pip install -r requirements.txt
 
- 🚀
+# Run database migrations
+python manage.py migrate
+
+# Create an admin user (optional)
+python manage.py createsuperuser
+
+# Start the development server
+python manage.py runserver
