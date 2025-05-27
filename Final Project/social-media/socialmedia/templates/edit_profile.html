@@ -8,11 +8,11 @@
             </div>
             <div class="modal-body">
 
-                <form  method="POST" enctype="multipart/form-data">
+                <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="mb-3">
                         <img src="{% static 'css/upload.png' %}" alt="" class="m-1">
-                        
+
                         <label for="recipient-name" class="col-form-label">Photo</label>
                         <input type="file" name="image" class="form-control" id="recipient-name">
 
@@ -24,7 +24,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Location</label>
-                        <input type="text" class="form-control" name="location" id="recipient-name" value="{{user_profile.location}}">
+                        <input type="text" class="form-control" name="location" id="recipient-name"
+                            value="{{user_profile.location}}">
                     </div>
 
             </div>

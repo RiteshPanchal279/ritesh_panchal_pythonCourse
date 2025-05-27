@@ -104,7 +104,6 @@
             </nav>
             {% load static %}
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-                <!-- Your main content goes here -->
                 {% include "search.html" %}
                 {% include "profile_upload.html" %}
                 {% include "edit_profile.html" %}
@@ -129,10 +128,6 @@
                                             </button>
 
                                             {% endif %}
-
-
-
-
                                         </div>
                                         <div class="ms-3" style="margin-top: 130px;">
                                             <h5>@{{user_profile.user}}</h5>
@@ -183,9 +178,6 @@
                                         </div>
                                         <div class="mb-5">
                                             <p class="lead fw-normal mb-1">Photos</p>
-
-
-
                                         </div>
                                         <div class="image-grid">
                                             {% for pos in user_posts %}
@@ -197,18 +189,11 @@
                                                     <h5 class="card-title">{{pos.caption}}</h5>
                                                     {% if user == user_profile.user %} <a href=" /delete/{{pos.id}} "><i
                                                             class="fa-solid fa-trash"></i></a>
-
-
                                                     {% endif %}
                                                 </div>
                                             </div>
-
-
                                             {% endfor %}
                                         </div>
-
-
-
                                     </div>
                                 </div>
                             </div>
